@@ -2,14 +2,10 @@
 
 <a href="https://www.openolat.org"><img src="src/main/webapp/static/images/openolat/openolat_logo_claim_small_rgb.png" align="left"></a>
 
- **OpenOlat** is a web-based e-learning platform for teaching, learning, assessment and communication, an LMS, a learning management system. OpenOlat impresses with its simple and intuitive operation and rich feature set.
+ **OpenOlat** is a web-based e-learning platform for teaching, learning, assessment, and communication, an LMS, a learning management system. OpenOlat impresses with its simple and intuitive operation and rich feature set.
 
 A sophisticated modular toolkit provides course authors with a wide range of didactic  possibilities. Each OpenOlat installation can be individually extended, adapted to organizational needs, and integrated into existing IT infrastructures. The architecture is designed for minimal resource consumption, scalability and security in order to guarantee high system reliability. 
-
-Visit the [OpenOlat project homepage](https://www.openolat.com) and the [OpenOlat documentation](https://docs.openolat.org) for more information.
-
-
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openolat/OpenOlat) [![Twitter Follow](https://img.shields.io/twitter/follow/openolat?style=social)](https://twitter.com/openolat) [![Mastodon Follow](https://img.shields.io/mastodon/follow/108248790140395927?style=social)](https://mastodon.social/@openolat)
+##Techstack:
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
