@@ -1,4 +1,4 @@
-# OpenOlat
+
 
 <a href="https://www.openolat.org"><img src="src/main/webapp/static/images/openolat/openolat_logo_claim_small_rgb.png" align="left"></a>
 
@@ -10,73 +10,18 @@ Visit the [OpenOlat project homepage](https://www.openolat.com) and the [OpenOla
 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openolat/OpenOlat) [![Twitter Follow](https://img.shields.io/twitter/follow/openolat?style=social)](https://twitter.com/openolat) [![Mastodon Follow](https://img.shields.io/mastodon/follow/108248790140395927?style=social)](https://mastodon.social/@openolat)
-
-## Table of Contents
-
-1. [Licensing](#licensing)
-2. [Installation manual and user documentation](#installation-manual-and-user-documentation)
-3. [Community](#being-a-community-member)
-4. [Developers](#developers)
-    * [Setting up OpenOlat in Eclipse](#setting-up-openolat-in-eclipse-and-postgresql)
-    * [Alternative databases](#alternate-databases)
-    * [Compress javascript and CSS](#compress-javascript-and-css)
-    * [Themes](#themes)
-    * [REST API](#rest-api)
-    * [Automated tests](#automated-tests)
-5. [Supported by](#supported-by)
-
-## Licensing
-
-With regard to licensing and copyright please refer to the file [LICENSE](LICENSE) and [NOTICE.TXT](NOTICE.TXT)
-
-***
-
-## Installation manual and user documentation
-
-The documentation can be found at [https://docs.openolat.org](https://docs.openolat.org)
-
-### User documentation
- * [Release notes](https://docs.openolat.org/release_notes/)
- * [User manual](https://docs.openolat.org/manual_user/)
- * [Admin manual](https://docs.openolat.org/manual_admin/)
-
-### Technical documentation
- * [Installation guide for production](https://docs.openolat.org/manual_admin/installation/installGuide/)
- * [Developer cookbook manual](https://docs.openolat.org/manual_dev/)
- * [Installation guide for developers](#developers)
-
-### Other ressources 
-
-* [Mailing list](https://groups.google.com/forum/#!forum/openolat)
-* [Issue management in Jira](https://jira.openolat.org/)
-* [OpenOlat for the community](https://community.openolat.org) An OpenOlat instance dedicated to the community
-
-***
-
-## Being a community member
-
-We strongly suggest to participate in the **OpenOlat community membership program**. 
-Even though this software is free and open source, the development and management
-has to be funded by someone. If you like what we do and want the product to be
-maintained and developed in the long run you should consider purchasing a membership:
-[Partner program](https://www.openolat.com/open-source/).
-
-***
-
-## Developers
-
-### Setting up OpenOlat in Eclipse and PostgreSQL
-
-This is an installation guide for developers.
-
-#### Preconditions
-* Check that you are using maven 3.8 or higher (mvn -V)
-* Check that you have the git plugin installed in eclipse
-* Check that you have git installed
-* Check that you have Java 17 installed
-* Check that you have Tomcat 10.0 or 10.1 installed
-
-#### 1. In Eclipse
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
+![Tomcat](https://img.shields.io/badge/Apache%20Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-
 
 1. Clone OpenOlat:  
 Create a repository location (`https://github.com/OpenOLAT/OpenOLAT.git`) and
