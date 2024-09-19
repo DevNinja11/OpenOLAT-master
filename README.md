@@ -10,6 +10,7 @@ Visit the [OpenOlat project homepage](https://www.openolat.com) and the [OpenOla
 
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openolat/OpenOlat) [![Twitter Follow](https://img.shields.io/twitter/follow/openolat?style=social)](https://twitter.com/openolat) [![Mastodon Follow](https://img.shields.io/mastodon/follow/108248790140395927?style=social)](https://mastodon.social/@openolat)
+
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
@@ -21,7 +22,7 @@ Visit the [OpenOlat project homepage](https://www.openolat.com) and the [OpenOla
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![Tomcat](https://img.shields.io/badge/Apache%20Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-
+
 
 1. Clone OpenOlat:  
 Create a repository location (`https://github.com/OpenOLAT/OpenOLAT.git`) and
