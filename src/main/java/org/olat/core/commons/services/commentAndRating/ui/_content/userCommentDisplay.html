@@ -1,0 +1,89 @@
+<div id="o_comment_$comment.key" class="o_comment_wrapper clearfix #if($r.isNotNull($comment.getParent()) && $r.isNull($comment.getParent().getParent())) o_comment_reply #end">
+	#if($r.isNotNull($comment.getParent()))
+		<blockquote class="o_comment o_user_content_block o_comment_reply_block">
+	#end
+
+	#if($r.available("avatarCtrl"))
+		<div class="o_avatar">
+			$r.render("avatarCtrl")
+		</div>
+	#end
+	#if ($r.available("tools"))
+		$r.render("tools")
+	#end
+
+	<div class="o_comment_meta">
+		<span class="o_comment_author">
+			$r.render("creator")
+		</span>
+		<small class="o_date">
+			$formatter.formatDateAndTime($comment.getCreationDate())
+		</small>
+		#if($r.isNotNull($comment.getParent()))
+			<div class="o_muted">
+				#set($replyTo = "$parentUserName_" + $comment.getParent().getKey())
+				$r.translate("comments.comment.reply.title")
+				<a href="javascript:void(o_openPopUp('$r.commandURI("showuserinfo")', '${comment.getParent().getCreator().getKey()}', '900', '600', false))">
+					#evaluate($replyTo)
+				</a>
+			</div>
+		#end
+
+	#if($r.isNull($comment.getParent()))
+		</div>
+		<blockquote class="o_comment o_user_content_block">
+	#end
+	$comment.getComment()
+	#if($commentLeafs)
+		<div class="o_attachments o_attachments_preview">
+			#foreach($commentLeaf in $commentLeafs)
+				<div class="o_attachment">
+					#set($thumbnailUrl = "$thumbnail_" + $commentLeaf.getMetaInfo().getKey())
+					#set($fileSuffix = "$fileSuffix_" + $commentLeaf.getMetaInfo().getKey())
+					#set($fileName = "$fileName_" + $commentLeaf.getMetaInfo().getKey())
+					#set($isThumbnailAvailable = "#evaluate($thumbnailUrl)")
+
+					<div class="o_attachment_thumbnail_preview" onclick="$r.javaScriptCommand(${commentLeaf.getMetaInfo().getKey()});">
+						#if($isThumbnailAvailable.indexOf("/") != -1)
+							<img src="#evaluate(${thumbnailUrl})" alt=""/>
+						#else
+							<div class="o_visual_not_available"></div>
+							<div class="o_attachment_title">#evaluate($fileName)</div>
+						#end
+						<div class="o_labeled_light o_file_suffix">#evaluate($fileSuffix)</div>
+
+						<div class="o_attachment_thumbnail_action"> $r.render("prev-" + $commentLeaf.getMetaInfo().getKey()) </div>
+						<div class="o_attachment_thumbnail_action" style="margin-left: 45px;"> $r.render("download-" + $commentLeaf.getMetaInfo().getKey()) </div>
+					</div>
+				</div>
+			#end
+		</div>
+	#end
+
+	<!-- Covering special case for reply
+		 the structure is slightly different then non-replies-->
+	#if($r.isNotNull($comment.getParent()))
+		</div>
+	#end
+
+	#if ($r.available("replyLink"))
+		$r.render("replyLink")
+	#end
+
+	</blockquote>
+
+	#if ($r.available("replyCommentFormCtrl"))
+		<div class="o_comments_form">
+			<div class="o_avatar">
+				$r.render("avatarCtrlOwn")
+			</div>
+			<div class="o_comments_form_reply">
+				$r.render("replyCommentFormCtrl")
+			</div>
+		</div>
+	#end
+
+	#foreach($replyController in $replyControllers)
+		$r.render("$replyController.getViewCompName()")
+	#end
+</div>
