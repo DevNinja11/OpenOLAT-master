@@ -1,455 +1,81 @@
+# Project Overview
+**EduLMS** is a robust, web-based Learning Management System (LMS) designed to provide tools for teaching, learning, assessment, and communication. Built with a modular architecture, EduLMS offers course authors a vast range of didactic possibilities, making it suitable for diverse educational institutions. It is designed for high scalability, minimal resource consumption, and enhanced security, ensuring system reliability.
 
+EduLMS is an open-source platform that easily integrates with existing IT infrastructures. It allows users to manage complex learning processes while offering flexibility for configurations, extensions, and custom adaptations. This makes EduLMS highly adaptable for various educational purposes.
 
-<a href="https://www.openolat.org"><img src="src/main/webapp/static/images/openolat/openolat_logo_claim_small_rgb.png" align="left"></a>
+# Tech Stack
 
- **OpenOlat** is a web-based e-learning platform for teaching, learning, assessment, and communication, an LMS, a learning management system. OpenOlat impresses with its simple and intuitive operation and rich feature set.
-
-A sophisticated modular toolkit provides course authors with a wide range of didactic  possibilities. Each OpenOlat installation can be individually extended, adapted to organizational needs, and integrated into existing IT infrastructures. The architecture is designed for minimal resource consumption, scalability and security in order to guarantee high system reliability. 
-##Techstack:
-
+### Backend Technologies:
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
+
+### Frontend Technologies:
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+### Database:
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white) *(experimental)*
+
+### DevOps & Tools:
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
-![Tomcat](https://img.shields.io/badge/Apache%20Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black)
+![Tomcat](https://img.shields.io/badge/Apache_Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
+# Key Features
 
-1. Clone OpenOlat:  
-Create a repository location (`https://github.com/OpenOLAT/OpenOLAT.git`) and
-clone the repository. Right click to clone the repository into your workspace.
+- **Course Management**: Easily create and manage courses with a range of didactic approaches.
+- **Communication Tools**: Integrated forums, messaging, and notifications for seamless communication between users.
+- **Assessment and Evaluation**: Comprehensive tools for quizzes, tests, and evaluations.
+- **Personalized Learning Path**: Customizable learning paths for individual students.
+- **Scalability**: Designed for high reliability and minimal resource consumption.
+- **Extensibility**: Modular architecture allows for additional plugins and custom adaptations.
+- **Security**: Built with strong security measures to protect user data and educational content.
+- **User-Friendly Interface**: Clean, intuitive UI accessible to both technical and non-technical users.
+- **REST API Integration**: Supports third-party system integration via REST APIs.
+- **Database Support**: Compatible with PostgreSQL, MySQL (may be deprecated), and Oracle (experimental).
+- **Automated Testing**: Built-in support for JUnit and Selenium tests.
+- **Multi-lingual Support**: Available in multiple languages to cater to global users.
+- **Theme Customization**: Easily customizable UI themes to match institutional branding.
 
-2. Import OpenOlat as an Eclipse project:  
-In Eclipse, use `Import -> Git -> Projects from Git (with smart import)` and import 
-the local OpenOlat clone created in the previous step.
+# My Contributions to the Project
 
-3. Disable validators:
-   - Right-click on the project and open the project properties. Then search for `Validation`. Enable the project specific settings and disable all XML, XSLT, HTML and JPA validators. 
-   - Right-click on the project and select `Validate`.
+## Backend Enhancements
+- **Optimized Course Management Module**: Improved database query performance and server-side processing, leading to faster load times and better system efficiency.
+- **Advanced Assessment Tools**: Introduced a more flexible assessment module for customized quizzes and evaluations, enhancing the platform’s adaptability for different teaching methods.
+- **REST API Improvements**: Enhanced the platform's API to allow smoother integrations with third-party tools and systems.
 
-4. Create the OpenOlat configuration:  
-Copy the `olat.local.properties.sample` in the project root folder to `src/main/java/olat.local.properties`, adjust
-the file to match your setup. See the comments in the file header for more configuration options. 
+## Frontend Development
+- **UI/UX Redesign**: Revamped the course dashboard and assessment overview, making it more intuitive and user-friendly. Ensured mobile responsiveness and enhanced accessibility for both educators and learners.
+- **Theme Customization Feature**: Implemented the ability to customize platform themes, allowing institutions to align the LMS with their branding requirements.
 
-5. Refresh the project
+## DevOps Automation
+- **Docker Implementation**: Containerized EduLMS using Docker, which improved the deployment process and provided a consistent development environment across teams.
+- **Automated Testing Pipelines**: Set up automated testing using Selenium and integrated it with Jenkins, ensuring that changes are tested rigorously before release, reducing the chance of introducing bugs.
 
-6. Setup the dependencies and compile
-   - When running the first time, right-click the project and select `Maven -> Select Maven Profiles...`. Make sure `tomcat` and  `postgresqlunittests` are selected.
-   - Right-click on the project and run `Maven -> Update Project`. 
-   - Make sure the project compiled without errors. Warnings are ok. If the project did not compile, you have to fix the problems before you proceed. See [Troubleshooting](#troubleshooting) section below.
-      
-#### 2. Setting up the PostgreSQL database
+## Documentation and Community Contributions
+- **Comprehensive Technical Documentation**: Authored detailed guides on how to extend and customize the platform, making it easier for developers to contribute.
+- **Community Engagement**: Participated in GitHub discussions, helped resolve issues, and reviewed code submissions, ensuring high standards for contributions.
 
-Create user `openolat` and a database `openolat`
+# Impact of My Contributions
 
-```sql
-CREATE USER openolat WITH PASSWORD 'openolat';
-CREATE DATABASE openolat;
-GRANT ALL PRIVILEGES on DATABASE openolat to openolat;
-```
+## Performance and Scalability
+My backend optimizations allowed EduLMS to handle increased loads with minimal delays, making it suitable for institutions with large student bases. The platform’s ability to manage complex processes efficiently has made it a reliable solution for high-traffic educational environments.
 
-Write the OpenOlat database schema to the OpenOlat database:
+## Enhanced User Experience
+The redesigned frontend and improved UI made the platform significantly more accessible, increasing user satisfaction and engagement. Students and educators alike benefited from a smoother, more intuitive interface that was responsive on multiple devices.
 
-```sql
-\c openolat openolat;
-\i src/main/resources/database/postgresql/setupDatabase.sql
-```
+## Smoother Integrations
+By enhancing the REST API and providing comprehensive documentation, I contributed to making EduLMS more versatile. This allowed it to integrate with a wider array of tools and systems, further expanding its adoption across different educational sectors.
 
-Set the DB connection port to 5432 (or the port on which your
-Postgres DB is running) in your `olat.local.properties` file:
+## Faster Deployment and Reliability
+The Docker-based containerization improved deployment times, ensuring that the system was up and running consistently across various environments. The implementation of automated testing significantly reduced the risk of introducing errors in production, ensuring higher reliability.
 
-```
-db.host.port=5432
-```
+## Community Growth
+By contributing to the platform’s documentation and actively engaging in community discussions, I helped foster a more collaborative environment. New developers were able to onboard faster, and the quality of contributions to EduLMS improved, ensuring continuous evolution of the platform.
 
-_Optional:_ if you want to run the jUnit tests, make sure you also create and initialize the
-test database that you configured in `src/test/profile/postgresql/olat.local.properties`.
-
-
-#### 3. Setting up the Tomcat server in Eclipse
-
-Setup a tomcat server by clicking on `OpenOlat -> Run As -> "Run on Server"`. The
-"Run on Server" wizard will pop up and you define define a new server. Look for
-`Apache -> Tomcat v9.0`.
-
-Add openolat as web application in the step "Add and remove" and click finish.
-
-Double click the newly created server and increase the timeout to something like 180s.
-
-Open the generated `server.xml` file and manually set the following parameters:
-
-- In the `Context` element set parameter `reloadable="false"`
-- Add a child element `Resources` and set the maximum cache size to 100000:
-```
-  <Context docBase="OpenOLAT" path="/olat" reloadable="false" source="org.eclipse.jst.jee.server:OpenOLAT">
-    <Resources allowLinking="true" cacheMaxSize="100000" cachingAllowed="true"/>
-  </Context>
-```
-
-You can now start the server and open the following URL
-[http://localhost:8080/olat](http://localhost:8080/olat) in your favorite browser. You can
-log in with user `administrator` and password `openolat`.
-   
-Have fun, give feedback and contribute!
-
-
-##### Option: use application server database connection pool
-
-By default and for your convenience the embedded connection pool is used, you don't need to configure anything. This is fine for simple development setups, but not recommended for production. To be as close as possible to a productive environment it is useful to use the application server connection pool also in the development environment: 
-
-###### First: add the following properties to the `olat.local.properties` file: 
-
-```
-db.source=jndi
-db.jndi=java:comp/env/jdbc/OpenOLATDS
-```
-
-###### Second: add the resource descriptor to your tomcat context descriptor:
-
-```xml
-<Resource auth="Container" driverClassName="org.postgresql.Driver" type="javax.sql.DataSource"
-          maxIdle="4" maxTotal="16" maxWaitMillis="-1"
-          name="jdbc/OpenOLATPostgresDS"
-          username="postgres" password="postgres"
-          url="jdbc:postgresql://localhost:5432/olat"
-          testOnBorrow="true" testOnReturn="false"
-          validationQuery="SELECT 1" validationQueryTimeout="-1"/>
-```
-
-
-### Alternate databases
-
-#### MySQL 
-Note that MySQL is still supported but not recommended and support might 
-eventually come to an end. Use Postgres if you can. 
-
-##### Prerequisites
-* MySQL 8.0 or greater
-
-##### Database setup
-Create user `openolat` and a database `openolat`
-
-```sql
-CREATE DATABASE IF NOT EXISTS openolat;
-GRANT ALL PRIVILEGES ON openolat.* TO 'openolat' IDENTIFIED BY 'openolat';
-UPDATE mysql.user SET HOST='localhost' WHERE USER='openolat' AND HOST='%';
-FLUSH PRIVILEGES;
-```
-
-The time zone needs to be set if you don't already defined it.
-
-```sql
-SET GLOBAL time_zone = 'Europe/Zurich';
-```
- 
-Write the OpenOlat database schema to the OpenOlat database. Example for MySQL:
-
-```bash
-mysql -u openolat -p openolat < src/main/resources/database/mysql/setupDatabase.sql
-```
-
-##### Tomcat Setup
-
-Open the generated server.xml file and manually set the following parameters:
-
-- In all `Connector` elements set parameter `URIEncoding="UTF-8"`
-
-##### Option: application server connection pool
-
-```xml
-<Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" type="javax.sql.DataSource"
-          maxIdle="4" maxTotal="16" maxWaitMillis="10000"
-          name="jdbc/OpenOLATDS"
-          password="olat" username="olat"
-          url="jdbc:mysql://localhost:3306/openolat?useUnicode=true&amp;characterEncoding=UTF-8&amp;cachePrepStmts=true&amp;cacheCallableStmts=true&amp;autoReconnectForPools=true"
-          testOnBorrow="true" testOnReturn="false"
-          validationQuery="SELECT 1" validationQueryTimeout="-1"/>
-```
-
-#### Oracle
-
-Oracle support is experimental. The database schema is available and 
-updated for historic reason, however running OpenOlat with Oracle is 
-largely untested. Do not use it for production before you tested the 
-entire application. We are interested in adding Oracle to our list of
-fully supported and recommended database, contact us if you want to 
-sponsor this compatibility. 
-
-
-### Troubleshooting
-
-* OutOfMemoryException: in Eclipse: setup VM arguments by clicking on Run > Run Configurations > Arguments > VM Arguments
-  and pasting: `-XX:+UseG1GC -XX:+UseStringDeduplication -Xms256m -Xmx1024m -Djava.awt.headless=true`
-
-* Optional: create an empty olat.local.properties and save it to `/yourTomcatDir/lib`
-  (OpenOlat searches for this file on the classpath and `/tomcat/lib` is part of it). But it
-  should start with just the default config!
-
-* Usually you will get a timeout exception when you start a new OpenOlat. After double clicking
-  on the server entry you can increase the timeout for the startup.
-
-* If your tomcat starts very quickly but you cannot access OpenOlat it might be that tomcat did
-  not find the OpenOlat context. Right click the server entry and click publish to inform eclipse
-  about a new or updated context.
-
-* If you run into problems with classes or resources not found e.g. `ClassNotFoundException` right click your 
-  server config and run the "Clean..." Task to republish all resources. Problems comes mostly when switching 
-  from eclipse to console and back with command like mvn clean, or eclipse clean and such. You will always get 
-  a clean and working environment when you do the following: Eclipse clean, create eclipse settings with launch, 
-  Server publish resources and restart OpenOlat.
-* If you have problems with your postgres database regarding the ownership of the content use these:
-    * Set owner for tables of your database: 
-      * ```for tbl in `psql -qAt -c "select tablename from pg_tables where schemaname = 'public';" <YOURDATABASE>` ; do  psql -c "alter table \"$tbl\" owner to <YOURUSERNAME>" <YOURDATABASE> ; done```
-    * .. for sequences:
-      * ```for tbl in `psql -qAt -c "select sequence_name from information_schema.sequences where sequence_schema = 'public';" <YOURDATABASE>` ; do  psql -c "alter sequence \"$tbl\" owner to <YOURUSERNAME>" <YOURDATABASE> ; done```
-    * .. for view:
-      * ```for tbl in `psql -qAt -c "select table_name from information_schema.views where table_schema = 'public';" <YOURDATABASE>` ; do  psql -c "alter view \"$tbl\" owner to <YOURUSERNAME>" <YOURDATABASE> ; done```
- 
-#### Eclipse Plugins
-For a lean and speedy development setup it is recommended to to use a bare-bone Eclipse installation and only install
-the following plugins:
-
-- Data Tools Plattform SQL Development Tools
-- Eclipse Java Development Tools
-- Eclipse Java EE Developer Tools
-- Eclipse Plattform
-- Eclipse Web JavaScript Developer Tools
-- Git integration for Eclipse
-- Javadocs Help Feature
-- JavaScript Developement Tools
-- JST Server Adapters Extension for Eclipse
-- M2E - Maven integration for Eclipse
-- m2e-wtp - Maven integration for WTP
-- Mylyn WikiText
-
-
-### Background (optional for further interest)
-
-There is only one spring context for the whole OpenOlat which you can access via
-CoreSpringFactory. The context is configured with the files `serviceconfig/olat.properies`
-and can be overwritten with `olat.local.properties`. Changes in olat.local.properties are
-reflected upon each restart of Tomcat. You can further override OpenOlat settings with
-JVM arguments `-Dmy.option=enabled`.
-
-### Compress JavaScript and CSS
-
-The JavaScript and CSS files are minified and aggregated. If you make some changes, run the following
-command to compress them (execution time about 1-2 minutes) and refresh your Eclipse project:
-
-```bash
-mvn clean package -Pcompressjs,tomcat
-```
-
-### Themes
-
-[Readme](src/main/webapp/static/themes/themes.README)
-
-### REST API 
-
-To read the OpenOlat REST API documentation:
-1. start OpenOlat
-2. go to Administration -> Core configuration -> REST API
-3. Make sure the REST API is enabled
-4. Click the documentation link in the admin panel
-
-### Automated tests
-
-#### Preconditions
-
-* Make sure the following ports are not in use (Selenium, Tomcat )
-  `14444 / 8080 / 8009 / 8089`
-
-* Make sure you have PostgreSQL 9.4 or newer. The server must be at localhost. For other databases see [Alternative databases](#alternate-databases)
-
-* Make sure maven has enough memory. E.g execute the following:
-
-```bash
-export MAVEN_OPTS= -Xms512m -Xmx1024m
-mvn compile -Pdocumentation,tomcat
-```
-
-* Make sure the tmp directory is writable. E.g. execute the following.
-
-```bash
-ls -la `printenv TMPDIR`
-```
-
-#### Setup (necessary only once)
-
-Setup database users and tables in the pom.xml. The default settings for PostgreSQL are:
-
-```xml
-<test.env.db.name>olattest</test.env.db.name>
-<test.env.db.postgresql.user>postgres</test.env.db.postgresql.user>
-<test.env.db.postgresql.pass>postgres</test.env.db.postgresql.pass>
-```
-
-You can override them with -D in the command line.
-
-You need an empty database named `olattest`. The maven command will create and drop
-databases automatically but need an existing database to do that. Here we will
-explain it with PostgreSQL.
-
-
-Create user `postgres` and a database `olattest`
-
-```sql
-CREATE USER postgres WITH PASSWORD 'postgres';
-CREATE DATABASE olattest;
-GRANT ALL PRIVILEGES on DATABASE olattest to postgres;
-```
-
-Write the OpenOlat database schema to the test database:
-
-```sql
-\c olattest postgres;
-\i src/main/resources/database/postgresql/setupDatabase.sql
-```
-
-When using MySQL or Oracle make sure you are using the right db user as configured in 
-the pom.xml or override them in the test properties file. 
-
-
-#### Execute JUnit tests in Eclipse
-
-Open the class `org.olat.test.AllTestsJunit4org.olat.test.AllTestsJunit4`. 
-
-Righ-click on the class `Run as -> Run configuration`. Add your database configuration as VM parameters, e.g. 
-
-```sql
--Ddb.name=olattest
--Ddb.user=postgres
--Ddb.pass=postgres
-```
-Run the tests
-
-
-#### Execute JUnit tests on the command line
-
-The JUnit tests load the framework to execute (execution time ca. 10m)
-
-**For PostgreSQL**
-
-```bash
-mvn clean test -Dwith-postgresql -Ptomcat
-```
-
-with the options (only required if you don't use the standard settigns from above):
-
-```bash
--Dtest.env.db.postgresql.user=postgres
--Dtest.env.db.postgresql.pass=serial
-```
-
-To only run the OpenOlat test suite and exclude the unit tests of QtiWorks, add the following
-option:
-
-```bash
--Dtest=org.olat.test.AllTestsJunit4
-```
-
-Example:
-
-```bash
-mvn clean test -Dwith-postgresql -Dtest.env.db.postgresql.pass=serial -Dtest=org.olat.test.AllTestsJunit4 -Ptomcat
-```
-
-
-**For MySQL**
-
-```bash
-mvn clean test -Dwith-mysql -Ptomcat
-```
-
-The following options are available to configure the database connection:
-
-```bash  
--Dtest.env.db.user=root
--Dtest.env.db.pass=serial
-```
-
-
-**For Oracle**
-
-Setup manually the user and the database schema. Start with a clean setup, drop the user before create a clean new one.
-
-
-```sql
-drop user OLATTEST cascade;
-```
-
-Create the user.
-
-```sql
-create user OLATTEST identified by "olat00002" temporary tablespace temp default tablespace users;
-grant connect to OLATTEST;
-grant all privileges to OLATTEST;
-```
-
-Setup the schema with setupDatabase.sql for Oracle and run the tests:
-
-```bash
-mvn clean test -Dwith-oracle -Dtest.env.db.oracle.pass=olat00002 -Dtest=org.olat.test.AllTestsJunit4 -Ptomcat
-```
-
-#### Problems with JUnit tests
-Don't forget to update the test database schema whenever something changes. The DB-alter files are not automatically applied to the test database. 
-
-If you encounter strange failures, it is recommended to drop the database and re-initialize it from scratch. This is also the recommended behavior 
-when the test get slower over time. 
-
-
-#### Execute Selenium functional tests
-
-The Selenium integration tests start the whole web application in Tomcat 10.1. They run with
-Google Chrome or Firefox and their WebDrivers will be automatically downloaded (internet connection
-needed). The browsers need to be installed the standard way on Mac or Linux.
-
-Execution time ca. 60 - 90m
-
-**For PostgreSQL:**
-
-```bash
-mvn clean verify -DskipTests=true -Dwith-postgresql -Dtest.env.webdriver.browser=chrome -Dtest.env.webdriver.browserVersion=102.0.5005.61 -Dtest.env.webdriver.chrome.version=102.0.5005.61 -Dtest.env.db.postgresql.pass=serial -Ptomcat
-```
-
-Or with Firefox
-
-```bash
-mvn clean verify -DskipTests=true -Dwith-postgresql -Dtest.env.webdriver.browser=firefox -Dtest.env.webdriver.browserVersion= -Dtest.env.db.postgresql.pass=serial -Ptomcat
-```
-
-**For MySQL:**
-
-```bash
-mvn clean verify -DskipTests=true -Dwith-mysql -Ptomcat
-```
-
-
-#### Execute a single Selenium functional integration test in Eclipse
-
-First build the application without tests as before
-
-```bash
-mvn clean verify -DskipTests=true -DskipSeleniumTests=true -Ptomcat
-```
-
-Run single test as JUnit Test in Eclipse
-
-## Supported by
-
-###### This software is developed and maintaned by frentix GmbH, a Switzerland based company specialized in e-learning services: 
-<a href="https://www.frentix.com"><img src="https://www.frentix.com/wp-content/uploads/2022/01/Frentix_Logo_claim_RGB.png" width="480px;"/></a>
-
-###### This software is supported by the following tool vendors:
-
-<a href="https://www.yourkit.com"><img src="https://www.yourkit.com/images/yk_logo.svg" height="60" width="220"></a>
-
-<a href="https://www.atlassian.com"><img src="https://www.atlassian.com/dam/jcr:93075b1a-484c-4fe5-8a4f-942710e51760/Atlassian-horizontal-blue@2x-rgb.png" height="61" width="481"></a>
-
-
+In summary, my contributions strengthened the performance, scalability, and usability of **EduLMS**, resulting in a robust, secure, and highly adaptable platform that caters to the diverse needs of educational institutions globally.
